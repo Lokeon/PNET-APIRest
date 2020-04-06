@@ -9,6 +9,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+/node/routes/activity-service.js
 
 npm-debug.log*
 package-lock.json
