@@ -1,0 +1,24 @@
+.resultado {
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.titulo {
+}
+.descripcion {
+}
+
+.asistentes {
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+#tab1 {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}

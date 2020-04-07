@@ -6,7 +6,11 @@ function getActivity(idActivity) {
     dataType: "json",
     url: myUrl,
     success: function (data) {
-      $("#resGetHello").html(JSON.stringify(data[0]));
+      $(".titulo").html(JSON.stringify(data[0].name).replace(/"/g, ""));
+      $(".descripcion").html(
+        JSON.stringify(data[0].description).replace(/"/g, "")
+      );
+      $(".asistentes").html(JSON.stringify(data[0].maxasist));
     },
     error: function (res) {
       alert("ERROR" + res.statusText);
@@ -22,7 +26,7 @@ function getAllActivities() {
     dataType: "json",
     url: myUrl,
     success: function (data) {
-      $("#resGetHello").html(JSON.stringify(data));
+      $("#resultado").html(JSON.stringify(data));
     },
     error: function (res) {
       alert("ERROR" + res.statusText);

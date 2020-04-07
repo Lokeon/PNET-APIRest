@@ -1,0 +1,38 @@
+.tabPanel {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  height: 85%;
+  text-align: center;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.buttonContainer button {
+  width: 25%;
+  height: 100%;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #333;
+  color: white;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#button1 {
+  border-bottom-left-radius: 10px;
+}
+
+#button2 {
+  border-bottom-right-radius: 10px;
+}
+
+.buttonContainer button:hover {
+  background-color: #497583;
+}

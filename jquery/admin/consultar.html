@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <!-- CSS Main Layout-->
+    <link rel="stylesheet" href="../css/layout.css" />
+    <!-- CSS Invitados-->
+    <link rel="stylesheet" href="../css/invitados.css" />
+    <!-- CSS Tabs-->
+    <link rel="stylesheet" href="../css/tabs.css" />
+    <!-- CSS Resultados-->
+    <link rel="stylesheet" href="../css/resultado.css" />
+    <title>MANGUCA</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html"
+            ><img src="../css/logo.png" alt="Logo Manguca"
+          /></a>
+        </div>
+        <div class="navbar">Panel de administración</div>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <!-- BUTTON TOP -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <div class="main">
+        <div class="content">
+          <!-- SIDEBAR -->
+          <div class="sidebar">
+            <a href="../index.html">Inicio</a>
+            <a class="active" href="./consultar.html">Consultar</a>
+            <a href="./insertar.html">Insertar</a>
+            <a href="./modificar.html">Modificar</a>
+            <a href="./eliminar.html">Eliminar</a>
+          </div>
+          <div class="information-box">
+            <!-- BANNER -->
+
+            <!-- FAKY INFO -->
+            <div class="information">
+              <!-- TEXT -->
+              <div class="buttonContainer">
+                <button onclick="showPanel(0,'#D8AC34')" id="button1">
+                  Individual
+                </button>
+                <button onclick="showPanel(1,'#D8AC34')" id="button2">
+                  Todo
+                </button>
+              </div>
+
+              <!-- TABLE DAY 1 -->
+              <div class="tabPanel">
+                <!--
+                   <form
+                  id="form"
+                  method="GET"
+                  onsubmit="getActivity()"
+                >
+               -->
+                <div id="tab1">
+                  <div class="col">
+                    <label for="forId">Id</label>
+                    <input
+                      required
+                      type="text"
+                      id="forId"
+                      placeholder="Id"
+                      name="id"
+                    />
+                    <input
+                      type="button"
+                      value="Enviar"
+                      id="submit"
+                      onclick="getActivity('5e8c9a832d95ab2848dec33f')"
+                    />
+                  </div>
+                  <div class="resultado">
+                    <p class="titulo"></p>
+                    <p class="descripcion"></p>
+                    <p class="asistentes"></p>
+                  </div>
+                </div>
+                <!--
+                   </form>
+               -->
+              </div>
+              <!-- END DAY 1 -->
+
+              <!-- TABLE DAY 2 -->
+              <div class="tabPanel">
+                <p>bbbb</p>
+              </div>
+              <!-- END DAY 2 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- SCRIPTS -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/wsinvocations.js"></script>
+    <script src="../js/tabs.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/sidebar.js"></script>
+  </body>
+</html>
