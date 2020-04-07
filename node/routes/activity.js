@@ -31,13 +31,13 @@ router.get("/:_id", function (req, res) {
 
 // Get all Activities
 router.get("/", function (req, res) {
-  activityService.getAll((err, movies) => {
+  activityService.getAll((err, activity) => {
     if (err) {
       res.status(500).send({ msg: err });
-    } else if (movies === null) {
+    } else if (activity === null) {
       res.status(500).send({ msg: "Activity is empty" });
     } else {
-      res.status(200).send(movies);
+      res.status(200).send(activity);
     }
   });
 });
