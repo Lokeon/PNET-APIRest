@@ -1,10 +1,11 @@
 .tabPanel {
-  padding-top: 3em;
+  /*padding-top: 3em;*/
   padding-bottom: 3em;
   height: 85%;
-  text-align: center;
+  /*text-align: center;*/
   box-sizing: border-box;
   justify-content: center;
+  overflow: auto;
 }
 
 .buttonContainer button {

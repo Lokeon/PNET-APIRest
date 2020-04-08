@@ -23,11 +23,30 @@
   align-self: center;
 }
 
+#justifycenter {
+  justify-content: center;
+}
+
 input {
   margin-bottom: 2em;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#btnSubmit {
+  background-color: #de1800;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
 }
 #tab1 {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 75%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
 }

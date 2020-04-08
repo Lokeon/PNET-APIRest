@@ -27,7 +27,26 @@ function getAllActivities() {
     dataType: "json",
     url: myUrl,
     success: function (data) {
-      $("#resultado").html(JSON.stringify(data));
+      var cabecera =
+        " <tr> <th>Id</th><th>Nombre</th><th>Descripción</th><th>Asistentes</th> </tr>";
+      var filas;
+      for (var i in data) {
+        console.log(data);
+        filas +=
+          "<tr> <td>" +
+          JSON.stringify(data[i]._id).replace(/"/g, "") +
+          "</td>" +
+          "<td>" +
+          JSON.stringify(data[i].name).replace(/"/g, "") +
+          "</td>" +
+          "<td>" +
+          JSON.stringify(data[i].description).replace(/"/g, "") +
+          "</td>" +
+          "<td>" +
+          JSON.stringify(data[i].maxasist).replace(/"/g, "") +
+          "</td> </tr>";
+        $(".resultado2").html(cabecera + filas);
+      }
     },
     error: function (res) {
       alert("ERROR" + res.statusText);

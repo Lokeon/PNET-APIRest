@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../css/resultado.css" />
     <title>MANGUCA</title>
   </head>
-  <body>
+  <body onload="getAllActivities()">
     <!-- NAVBAR -->
     <header>
       <div class="container">
@@ -69,7 +69,7 @@
                 >
                -->
                 <div id="tab1">
-                  <div class="col">
+                  <div class="col" id="justifycenter">
                     <div class="row">
                       <label for="forId">Id</label>
                       <input
@@ -101,7 +101,11 @@
 
               <!-- TABLE DAY 2 -->
               <div class="tabPanel">
-                <p>bbbb</p>
+                <div class="col">
+                  <table>
+                    <tbody class="resultado2"></tbody>
+                  </table>
+                </div>
               </div>
               <!-- END DAY 2 -->
             </div>
