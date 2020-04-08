@@ -3,7 +3,7 @@ function getActivity() {
   var myUrl = "http://localhost:8080/activities/" + $("#forId").val();
   $.ajax({
     type: "GET",
-    contentType: "application/json",
+    // dataType -> tipo dato que vas obtener del server
     dataType: "json",
     url: myUrl,
     success: function (data) {
@@ -24,7 +24,6 @@ function getAllActivities() {
   var myUrl = "http://localhost:8080/activities/";
   $.ajax({
     type: "GET",
-    contentType: "application/json",
     dataType: "json",
     url: myUrl,
     success: function (data) {
@@ -41,7 +40,6 @@ function deleteActivity() {
   var myUrl = "http://localhost:8080/activities/" + $("#forId").val();
   $.ajax({
     type: "GET",
-    contentType: "application/json",
     dataType: "json",
     url: myUrl,
     success: function (data) {
@@ -58,7 +56,6 @@ function deleteActivities() {
   var myUrl = "http://localhost:8080/activities/";
   $.ajax({
     type: "DELETE",
-    contentType: "application/json",
     dataType: "json",
     url: myUrl,
     success: function (data) {
@@ -75,8 +72,8 @@ function postActivity() {
   var myUrl = "http://localhost:8080/activities/";
   $.ajax({
     type: "POST",
+    // contentType -> lo que vas a enviar al server
     contentType: "application/json",
-    dataType: "json",
     url: myUrl,
     data: JSON.stringify({
       name: $("#forName").val(),
@@ -92,4 +89,8 @@ function postActivity() {
       alert("ERROR" + res.statusText);
     },
   });
+}
+
+function putActivity() {
+  
 }
