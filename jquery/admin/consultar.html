@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../css/resultado.css" />
     <title>MANGUCA</title>
   </head>
-  <body onload="getAllActivities()">
+  <body>
     <!-- NAVBAR -->
     <header>
       <div class="container">
@@ -54,7 +54,10 @@
                 <button onclick="showPanel(0,'#D8AC34')" id="button1">
                   Individual
                 </button>
-                <button onclick="showPanel(1,'#D8AC34')" id="button2">
+                <button
+                  onclick="showPanel(1,'#D8AC34'); getAllActivities()"
+                  id="button2"
+                >
                   Todo
                 </button>
               </div>
