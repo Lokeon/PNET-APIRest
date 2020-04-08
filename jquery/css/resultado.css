@@ -2,6 +2,9 @@
   background-color: white;
   border-radius: 10px;
   width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .titulo {
@@ -29,7 +32,6 @@
 
 input {
   margin-bottom: 2em;
-  border: none;
   border-radius: 5px;
   padding: 5px;
 }
@@ -49,4 +51,8 @@ input {
 .row {
   display: flex;
   flex-direction: column;
+}
+
+.table-c {
+  width: 50%;
 }
