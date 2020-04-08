@@ -44,31 +44,35 @@
           </div>
           <div class="information-box">
             <!-- FAKY INFO -->
-            <div class="information" id="justifycenter">
+            <div class="information" id="justify-center">
               <!-- TEXT -->
 
               <!-- TABLE DAY 1 -->
-              <div class="insertar" id="col">
-                <div class="col">
+              <div class="tab-Box">
+                <div class="input">
                   <label for="forName">Nombre</label>
                   <input type="text" id="forName" name="name" />
-                  <label for="forDescription">Descripcion</label>
+                </div>
+                <div class="input">
+                  <label for="forDescription">Descripción</label>
                   <input type="text" id="forDescription" name="description" />
-                  <label for="forMaxAsist">Numero de asistentes</label>
+                </div>
+                <div class="input">
+                  <label for="forMaxAsist">Nº de asistentes</label>
                   <input
                     type="number"
                     id="forMaxAsist"
                     name="maxasists"
                     min="0"
                   />
-                  <input
-                    type="button"
-                    id="btnSubmit"
-                    value="Enviar"
-                    disabled="disabled"
-                    onclick="postActivity()"
-                  />
                 </div>
+                <input
+                  type="button"
+                  id="btnSubmit"
+                  value="Enviar"
+                  disabled="disabled"
+                  onclick="postActivity()"
+                />
               </div>
               <!-- END DAY 1 -->
             </div>

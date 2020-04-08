@@ -33,7 +33,6 @@
     </header>
     <!-- MAIN -->
     <main>
-
       <div class="main">
         <div class="content">
           <!-- SIDEBAR -->
@@ -46,63 +45,41 @@
           </div>
           <div class="information-box">
             <!-- FAKY INFO -->
-            <div class="information">
+            <div class="information" id="justify-center">
               <!-- TEXT -->
-              <div class="buttonContainer">
-                <button onclick="showPanel(0,'#D8AC34')" id="button1">
-                  Individual
-                </button>
-                <button onclick="showPanel(1,'#D8AC34')" id="button2">
-                  Todo
-                </button>
-              </div>
 
               <!-- TABLE DAY 1 -->
-              <div class="tabPanel">
-                <div id="tab1">
-                  <div class="col">
-                    <label for="forName">Id</label>
-                    <input type="text" id="forId" placeholder="Id" name="id" />
-                    <input
-                      type="button"
-                      id="btnSubmit"
-                      value="Enviar"
-                      onclick="getActivityIn()"
-                    />
-                  </div>
-                  <div class="resultado">
-                    <label for="forName">Nombre</label>
-                    <input
-                      type="text"
-                      id="forName"
-                      placeholder="Name"
-                      name="name"
-                    />
-                    <label for="forDescription">Descripcion</label>
-                    <input
-                      type="text"
-                      id="forDescription"
-                      placeholder="Descripcion"
-                      name="description"
-                    />
-                    <label for="forMaxAsist">Numero de asistentes</label>
-                    <input type="number" id="forMaxAsist" name="maxasists" />
-                    <input
-                      type="button"
-                      id="btnSubmit"
-                      value="Enviar"
-                      onclick="putActivity()"
-                    />
-                  </div>
+              <div class="tab-Box" id="modify">
+                <div class="input">
+                  <label for="forName">Id</label>
+                  <input type="text" id="forId" name="id" />
                 </div>
+                <input
+                  type="button"
+                  id="btnSubmit"
+                  value="Buscar"
+                  onclick="getActivityIn()"
+                />
+                <div class="input">
+                  <label for="forName">Nombre</label>
+                  <input type="text" id="forName" name="name" />
+                </div>
+                <div class="input">
+                  <label for="forDescription">Descripción</label>
+                  <input type="text" id="forDescription" name="description" />
+                </div>
+                <div class="input">
+                  <label for="forMaxAsist">Nº de asistentes</label>
+                  <input type="number" id="forMaxAsist" name="maxasists" />
+                </div>
+                <input
+                  type="button"
+                  id="btnSubmit"
+                  value="Modificar"
+                  onclick="putActivity()"
+                />
               </div>
               <!-- END DAY 1 -->
-
-              <!-- TABLE DAY 2 -->
-              <div class="tabPanel">
-                <p>bbbb</p>
-              </div>
-              <!-- END DAY 2 -->
             </div>
           </div>
         </div>

@@ -1,11 +1,24 @@
 .tabPanel {
   /*padding-top: 3em;*/
   padding-bottom: 3em;
-  height: 85%;
-  /*text-align: center;*/
+  height: 100%;
+  width: 100%;
   box-sizing: border-box;
-  justify-content: center;
   overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-self: center;
+}
+
+.tab-Box {
+  height: 60%;
+  align-self: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
 .buttonContainer button {

@@ -69,67 +69,62 @@
                   onsubmit="getActivity()"
                 >
                -->
-                <div id="tab1">
-                  <div class="col" id="justifycenter">
-                    <div class="row">
-                      <label for="forId">Id</label>
+                <div class="tab-Box">
+                  <div class="input">
+                    <label for="forId">Id</label>
+                    <div class="input-box">
+                      <div id="forId-box">
+                        <input
+                          autocomplete="off"
+                          required
+                          type="text"
+                          id="forId"
+                          name="id"
+                        />
+                      </div>
                       <input
-                        autocomplete="off"
-                        required
-                        type="text"
-                        id="forId"
-                        placeholder="Id"
-                        name="id"
+                        type="button"
+                        id="btnSubmit"
+                        value="Enviar"
+                        onclick="getActivity()"
+                        disabled="disabled"
                       />
                     </div>
-                    <input
-                      type="button"
-                      id="btnSubmit"
-                      value="Enviar"
-                      onclick="getActivity()"
-                    />
                   </div>
-                  <div class="resultado">
-                    <table>
-                      <tbody>
-                        <tr>
-                          <th class="table-c">
-                            Nombre
-                          </th>
-                          <td class="titulo"></td>
-                        </tr>
-                        <tr>
-                          <th class="table-c">
-                            Descripción
-                          </th>
-                          <td class="descripcion"></td>
-                        </tr>
-                        <tr>
-                          <th class="table-c">
-                            Nº de asistentes
-                          </th>
-                          <td class="asistentes"></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>
+                          Título
+                        </th>
+                        <th>
+                          Descripción
+                        </th>
+                        <th>
+                          Nº de asistentes
+                        </th>
+                      </tr>
+                      <tr>
+                        <td class="titulo">-</td>
+                        <td class="descripcion">-</td>
+                        <td class="asistentes">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <!--
-                   </form>
-               -->
               </div>
               <!-- END DAY 1 -->
 
               <!-- TABLE DAY 2 -->
               <div class="tabPanel">
-                <div class="col">
+                <div class="tab-Box">
                   <table>
                     <tbody class="resultado2"></tbody>
                   </table>
                 </div>
               </div>
-              <!-- END DAY 2 -->
             </div>
+            <!-- END DAY 2 -->
           </div>
         </div>
       </div>
@@ -137,6 +132,7 @@
     <!-- SCRIPTS -->
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/wsinvocations.js"></script>
+    <script src="../js/disbutton.js"></script>
     <script src="../js/tabs.js"></script>
     <script src="../js/sidebar.js"></script>
   </body>

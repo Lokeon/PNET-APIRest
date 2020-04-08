@@ -98,10 +98,8 @@
 }
 
 table {
-  margin-top: 2em;
   padding-bottom: 3em;
   width: 100%;
-  max-width: 60em;
 }
 
 table tr,
@@ -156,7 +154,6 @@ table td {
   border-radius: 10px;
   width: 80%;
   height: 75vh;
-  justify-content: space-between;
   margin-top: 3em;
   display: flex;
   align-self: center;
