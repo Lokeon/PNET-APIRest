@@ -1,7 +1,7 @@
 (function () {
-  $(".insertar input").on("keyup change", function () {
+  $("#forName,#forDescription,#forMaxAsist").bind("keyup change", function () {
     var empty = false;
-    $(".insertar input").each(function () {
+    $("#forName,#forDescription,#forMaxAsist").each(function () {
       if ($(this).val() == "") {
         empty = true;
       }

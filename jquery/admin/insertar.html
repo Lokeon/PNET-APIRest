@@ -32,7 +32,6 @@
     </header>
     <!-- MAIN -->
     <main>
-
       <div class="main">
         <div class="content">
           <!-- SIDEBAR -->
@@ -52,25 +51,16 @@
               <div class="insertar" id="col">
                 <div class="col">
                   <label for="forName">Nombre</label>
-                  <input
-                    type="text"
-                    id="forName"
-                    placeholder="Name"
-                    name="name"
-                  />
+                  <input type="text" id="forName" name="name" />
                   <label for="forDescription">Descripcion</label>
-                  <input
-                    type="text"
-                    id="forDescription"
-                    placeholder="Descripcion"
-                    name="description"
-                  />
+                  <input type="text" id="forDescription" name="description" />
                   <label for="forMaxAsist">Numero de asistentes</label>
                   <input type="number" id="forMaxAsist" name="maxasists" />
                   <input
                     type="button"
                     id="btnSubmit"
                     value="Enviar"
+                    disabled="disabled"
                     onclick="postActivity()"
                   />
                 </div>
