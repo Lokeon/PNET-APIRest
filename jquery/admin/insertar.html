@@ -41,22 +41,64 @@
             <a href="./eliminar.html">Eliminar</a>
           </div>
           <div class="information-box">
-            <!-- BANNER -->
-            <div class="titleBox">
-              <div id="title">
-                <span>FAKY</span>
-              </div>
-            </div>
             <!-- FAKY INFO -->
             <div class="information">
               <!-- TEXT -->
-              <div class="content"></div>
+              <div class="buttonContainer">
+                <button onclick="showPanel(0,'#D8AC34')" id="button1">
+                  Individual
+                </button>
+                <button onclick="showPanel(1,'#D8AC34')" id="button2">
+                  Todo
+                </button>
+              </div>
+
+              <!-- TABLE DAY 1 -->
+              <div class="tabPanel">
+                  <div id="tab1">
+                    <div class="col">
+                      <label for="forName">Nombre</label>
+                      <input
+                        type="text"
+                        id="forName"
+                        placeholder="Name"
+                        name="name"
+                      />
+                      <label for="forDescription">Descripcion</label>
+                      <input
+                        type="text"
+                        id="forDescription"
+                        placeholder="Descripcion"
+                        name="description"
+                      />
+                      <label for="forMaxAsist">Numero de asistentes</label>
+                      <input type="number" id="forMaxAsist" name="maxasists" />
+                      <input type="button" id="btnSubmit" value="Enviar" onclick="postActivity()" />
+                    </div>
+                    <div class="resultado">
+                      <p class="titulo"></p>
+                      <p class="descripcion"></p>
+                      <p class="asistentes"></p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- END DAY 1 -->
+
+              <!-- TABLE DAY 2 -->
+              <div class="tabPanel">
+                <p>bbbb</p>
+              </div>
+              <!-- END DAY 2 -->
             </div>
           </div>
         </div>
       </div>
     </main>
     <!-- SCRIPTS -->
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/wsinvocations.js"></script>
+    <script src="../js/tabs.js"></script>
     <script src="../js/scroll.js"></script>
     <script src="../js/sidebar.js"></script>
   </body>

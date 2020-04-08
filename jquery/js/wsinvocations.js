@@ -1,8 +1,9 @@
 // Get Activity with id
-function getActivity(idActivity) {
-  var myUrl = "http://localhost:8080/activities/" + idActivity;
+function getActivity() {
+  var myUrl = "http://localhost:8080/activities/" + $("#forId").val();
   $.ajax({
     type: "GET",
+    contentType: "application/json",
     dataType: "json",
     url: myUrl,
     success: function (data) {
@@ -10,7 +11,7 @@ function getActivity(idActivity) {
       $(".descripcion").html(
         JSON.stringify(data[0].description).replace(/"/g, "")
       );
-      $(".asistentes").html(JSON.stringify(data[0].maxasist));
+      $(".asistentes").html(JSON.stringify(data[0].maxasist).replace(/"/g, ""));
     },
     error: function (res) {
       alert("ERROR" + res.statusText);
@@ -23,6 +24,7 @@ function getAllActivities() {
   var myUrl = "http://localhost:8080/activities/";
   $.ajax({
     type: "GET",
+    contentType: "application/json",
     dataType: "json",
     url: myUrl,
     success: function (data) {
@@ -35,10 +37,11 @@ function getAllActivities() {
 }
 
 // Delete Activity with id
-function deleteActivity(idActivity) {
-  var myUrl = "http://localhost:8080/activities/" + idActivity;
+function deleteActivity() {
+  var myUrl = "http://localhost:8080/activities/" + $("#forId").val();
   $.ajax({
     type: "GET",
+    contentType: "application/json",
     dataType: "json",
     url: myUrl,
     success: function (data) {
@@ -55,6 +58,7 @@ function deleteActivities() {
   var myUrl = "http://localhost:8080/activities/";
   $.ajax({
     type: "DELETE",
+    contentType: "application/json",
     dataType: "json",
     url: myUrl,
     success: function (data) {
@@ -68,18 +72,24 @@ function deleteActivities() {
 
 // Create Activity
 function postActivity() {
-  var dataForm = $("#form").serialize();
+  var myUrl = "http://localhost:8080/activities/";
   $.ajax({
     type: "POST",
-    url: "http://localhost:8080/activities/",
     contentType: "application/json",
-    data: dataForm,
-    success: function (data) {
-      $("#resGetHello").html(data);
+    dataType: "json",
+    url: myUrl,
+    data: JSON.stringify({
+      name: $("#forName").val(),
+      description: $("#forDescription").val(),
+      maxasist: $("#forMaxAsist").val(),
+    }),
+    success: function () {
+      $("#forName").val("");
+      $("#forDescription").val("");
+      $("#forMaxAsist").val("");
     },
     error: function (res) {
       alert("ERROR" + res.statusText);
     },
   });
-  return false;
 }
