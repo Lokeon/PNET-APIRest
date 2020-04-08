@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="../css/layout.css" />
     <!-- CSS Invitados-->
     <link rel="stylesheet" href="../css/invitados.css" />
+    <!-- CSS Tabs-->
+    <link rel="stylesheet" href="../css/tabs.css" />
+    <!-- CSS Tabs-->
+    <link rel="stylesheet" href="../css/resultado.css" />
     <title>MANGUCA</title>
   </head>
   <body>
@@ -44,51 +48,35 @@
             <!-- FAKY INFO -->
             <div class="information">
               <!-- TEXT -->
-              <div class="buttonContainer">
-                <button onclick="showPanel(0,'#D8AC34')" id="button1">
-                  Individual
-                </button>
-                <button onclick="showPanel(1,'#D8AC34')" id="button2">
-                  Todo
-                </button>
-              </div>
 
               <!-- TABLE DAY 1 -->
-              <div class="tabPanel">
-                <div id="tab1">
-                  <div class="col">
-                    <label for="forName">Nombre</label>
-                    <input
-                      type="text"
-                      id="forName"
-                      placeholder="Name"
-                      name="name"
-                    />
-                    <label for="forDescription">Descripcion</label>
-                    <input
-                      type="text"
-                      id="forDescription"
-                      placeholder="Descripcion"
-                      name="description"
-                    />
-                    <label for="forMaxAsist">Numero de asistentes</label>
-                    <input type="number" id="forMaxAsist" name="maxasists" />
-                    <input
-                      type="button"
-                      id="btnSubmit"
-                      value="Enviar"
-                      onclick="postActivity()"
-                    />
-                  </div>
+              <div class="tabPanel" id="col">
+                <div class="col">
+                  <label for="forName">Nombre</label>
+                  <input
+                    type="text"
+                    id="forName"
+                    placeholder="Name"
+                    name="name"
+                  />
+                  <label for="forDescription">Descripcion</label>
+                  <input
+                    type="text"
+                    id="forDescription"
+                    placeholder="Descripcion"
+                    name="description"
+                  />
+                  <label for="forMaxAsist">Numero de asistentes</label>
+                  <input type="number" id="forMaxAsist" name="maxasists" />
+                  <input
+                    type="button"
+                    id="btnSubmit"
+                    value="Enviar"
+                    onclick="postActivity()"
+                  />
                 </div>
               </div>
               <!-- END DAY 1 -->
-
-              <!-- TABLE DAY 2 -->
-              <div class="tabPanel">
-                <p>bbbb</p>
-              </div>
-              <!-- END DAY 2 -->
             </div>
           </div>
         </div>

@@ -15,8 +15,17 @@
 .col {
   display: flex;
   flex-direction: column;
+  height: 80%;
 }
 
+#col {
+  max-width: 70%;
+  align-self: center;
+}
+
+input {
+  margin-bottom: 2em;
+}
 #tab1 {
   display: flex;
   justify-content: space-between;
