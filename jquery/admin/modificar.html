@@ -63,13 +63,32 @@
                       type="button"
                       id="btnSubmit"
                       value="Enviar"
-                      onclick="getActivity()"
+                      onclick="getActivityIn()"
                     />
                   </div>
                   <div class="resultado">
-                    <input type="text" class="titulo" />
-                    <input type="text" class="descripcion" />
-                    <input type="number" class="asistentes" />
+                    <label for="forName">Nombre</label>
+                    <input
+                      type="text"
+                      id="forName"
+                      placeholder="Name"
+                      name="name"
+                    />
+                    <label for="forDescription">Descripcion</label>
+                    <input
+                      type="text"
+                      id="forDescription"
+                      placeholder="Descripcion"
+                      name="description"
+                    />
+                    <label for="forMaxAsist">Numero de asistentes</label>
+                    <input type="number" id="forMaxAsist" name="maxasists" />
+                    <input
+                      type="button"
+                      id="btnSubmit"
+                      value="Enviar"
+                      onclick="putActivity()"
+                    />
                   </div>
                 </div>
               </div>

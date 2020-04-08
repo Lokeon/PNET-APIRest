@@ -91,19 +91,43 @@ function postActivity() {
   });
 }
 
+// Get Activity with id for inputs
+function getActivityIn() {
+  var myUrl = "http://localhost:8080/activities/" + $("#forId").val();
+  $.ajax({
+    type: "GET",
+    // dataType -> tipo dato que vas obtener del server
+    dataType: "json",
+    url: myUrl,
+    success: function (data) {
+      $("#forName").val(JSON.stringify(data[0].name).replace(/"/g, ""));
+      $("#forDescription").val(
+        JSON.stringify(data[0].description).replace(/"/g, "")
+      );
+      $("#forMaxAsist").val(JSON.stringify(data[0].maxasist).replace(/"/g, ""));
+    },
+    error: function (res) {
+      alert("ERROR" + res.statusText);
+    },
+  });
+}
+
+// Update Activity with Id
 function putActivity() {
   var myUrl = "http://localhost:8080/activities/" + $("#forId").val();
   $.ajax({
     type: "PUT",
     contentType: "application/json",
-    dataType: "json",
     url: myUrl,
-    success: function (data) {
-      $(".titulo").html(JSON.stringify(data[0].name).replace(/"/g, ""));
-      $(".descripcion").html(
-        JSON.stringify(data[0].description).replace(/"/g, "")
-      );
-      $(".asistentes").html(JSON.stringify(data[0].maxasist).replace(/"/g, ""));
+    data: JSON.stringify({
+      name: $("#forName").val(),
+      description: $("#forDescription").val(),
+      maxasist: $("#forMaxAsist").val(),
+    }),
+    success: function () {
+      $("#forName").val("");
+      $("#forDescription").val("");
+      $("#forMaxAsist").val("");
     },
     error: function (res) {
       alert("ERROR" + res.statusText);
