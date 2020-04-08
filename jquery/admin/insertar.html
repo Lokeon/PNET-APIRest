@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/invitados.css" />
     <!-- CSS Tabs-->
     <link rel="stylesheet" href="../css/tabs.css" />
-    <!-- CSS Tabs-->
+    <!-- CSS Resultados-->
     <link rel="stylesheet" href="../css/resultado.css" />
     <title>MANGUCA</title>
   </head>
@@ -43,23 +43,26 @@
             <a href="./eliminar.html">Eliminar</a>
           </div>
           <div class="information-box">
-            <!-- FAKY INFO -->
             <div class="information" id="justify-center">
-              <!-- TEXT -->
-
-              <!-- TABLE DAY 1 -->
+              <!-- POST -->
               <div class="tab-Box">
                 <div class="input">
                   <label for="forName">Nombre</label>
-                  <input type="text" id="forName" name="name" />
+                  <input required type="text" id="forName" name="name" />
                 </div>
                 <div class="input">
                   <label for="forDescription">Descripción</label>
-                  <input type="text" id="forDescription" name="description" />
+                  <input
+                    rquired
+                    type="text"
+                    id="forDescription"
+                    name="description"
+                  />
                 </div>
                 <div class="input">
                   <label for="forMaxAsist">Nº de asistentes</label>
                   <input
+                    required
                     type="number"
                     id="forMaxAsist"
                     name="maxasists"
@@ -68,13 +71,13 @@
                 </div>
                 <input
                   type="button"
+                  class="buttons"
                   id="btnSubmit"
                   value="Enviar"
                   disabled="disabled"
                   onclick="postActivity()"
                 />
               </div>
-              <!-- END DAY 1 -->
             </div>
           </div>
         </div>
@@ -84,7 +87,6 @@
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/wsinvocations.js"></script>
     <script src="../js/tabs.js"></script>
-    <script src="../js/sidebar.js"></script>
     <script src="../js/disbutton.js"></script>
   </body>
 </html>

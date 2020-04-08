@@ -21,7 +21,7 @@ input[type="number"] {
   border-radius: 5px;
 }
 
-#btnSubmit {
+.buttons {
   background-color: #de1800;
   width: 20%;
   align-self: center;
@@ -31,7 +31,7 @@ input[type="number"] {
   border-radius: 5px;
 }
 
-#btnSubmit:disabled {
+.buttons:disabled {
   background-color: grey;
   color: darkgray;
 }

@@ -44,42 +44,63 @@
             <a href="./eliminar.html">Eliminar</a>
           </div>
           <div class="information-box">
-            <!-- FAKY INFO -->
             <div class="information" id="justify-center">
-              <!-- TEXT -->
-
-              <!-- TABLE DAY 1 -->
+              <!-- FIND ACTIVITY -->
               <div class="tab-Box" id="modify">
                 <div class="input">
-                  <label for="forName">Id</label>
+                  <label for="forId">Id</label>
                   <input type="text" id="forId" name="id" />
                 </div>
                 <input
+                  required
                   type="button"
-                  id="btnSubmit"
+                  id="btnFind"
+                  class="buttons"
                   value="Buscar"
+                  disabled="disabled"
                   onclick="getActivityIn()"
                 />
+                <!-- PUT ACTIVITY -->
                 <div class="input">
                   <label for="forName">Nombre</label>
-                  <input type="text" id="forName" name="name" />
+                  <input
+                    required
+                    type="text"
+                    id="forName"
+                    name="name"
+                    disabled="disabled"
+                  />
                 </div>
                 <div class="input">
                   <label for="forDescription">Descripción</label>
-                  <input type="text" id="forDescription" name="description" />
+                  <input
+                    required
+                    type="text"
+                    id="forDescription"
+                    name="description"
+                    disabled="disabled"
+                  />
                 </div>
                 <div class="input">
                   <label for="forMaxAsist">Nº de asistentes</label>
-                  <input type="number" id="forMaxAsist" name="maxasists" />
+                  <input
+                    required
+                    type="number"
+                    id="forMaxAsist"
+                    name="maxasists"
+                    min="0"
+                    disabled="disabled"
+                  />
                 </div>
                 <input
+                  id="btnPUT"
+                  class="buttons"
                   type="button"
-                  id="btnSubmit"
                   value="Modificar"
                   onclick="putActivity()"
+                  disabled="disabled"
                 />
               </div>
-              <!-- END DAY 1 -->
             </div>
           </div>
         </div>
@@ -89,6 +110,6 @@
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/wsinvocations.js"></script>
     <script src="../js/tabs.js"></script>
-    <script src="../js/sidebar.js"></script>
+    <script src="../js/disbuttonmod.js"></script>
   </body>
 </html>
