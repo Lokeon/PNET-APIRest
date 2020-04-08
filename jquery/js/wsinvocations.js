@@ -92,5 +92,21 @@ function postActivity() {
 }
 
 function putActivity() {
-  
+  var myUrl = "http://localhost:8080/activities/" + $("#forId").val();
+  $.ajax({
+    type: "PUT",
+    contentType: "application/json",
+    dataType: "json",
+    url: myUrl,
+    success: function (data) {
+      $(".titulo").html(JSON.stringify(data[0].name).replace(/"/g, ""));
+      $(".descripcion").html(
+        JSON.stringify(data[0].description).replace(/"/g, "")
+      );
+      $(".asistentes").html(JSON.stringify(data[0].maxasist).replace(/"/g, ""));
+    },
+    error: function (res) {
+      alert("ERROR" + res.statusText);
+    },
+  });
 }
