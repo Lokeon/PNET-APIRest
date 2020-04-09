@@ -14,7 +14,10 @@ function getActivity() {
       $(".asistentes").html(JSON.stringify(data[0].maxasist).replace(/"/g, ""));
     },
     error: function (res) {
-      alert("ERROR" + res.statusText);
+      Swal.fire({
+        icon: "error",
+        text: "ERROR " + res.statusText,
+      });
     },
   });
 }
@@ -31,7 +34,6 @@ function getAllActivities() {
         " <tr> <th>Id</th><th>Nombre</th><th>Descripción</th><th>Asistentes</th> </tr>";
       var filas;
       for (var i in data) {
-        console.log(data);
         filas +=
           "<tr> <td>" +
           JSON.stringify(data[i]._id).replace(/"/g, "") +
@@ -49,7 +51,10 @@ function getAllActivities() {
       }
     },
     error: function (res) {
-      alert("ERROR" + res.statusText);
+      Swal.fire({
+        icon: "error",
+        text: "ERROR " + res.statusText,
+      });
     },
   });
 }
@@ -65,7 +70,10 @@ function deleteActivity() {
       $("#resGetHello").html(JSON.stringify(data[0]));
     },
     error: function (res) {
-      alert("ERROR" + res.statusText);
+      Swal.fire({
+        icon: "error",
+        text: "ERROR " + res.statusText,
+      });
     },
   });
 }
@@ -81,7 +89,10 @@ function deleteActivities() {
       alert("Activities Deleted!");
     },
     error: function (res) {
-      alert("ERROR" + res.statusText);
+      Swal.fire({
+        icon: "error",
+        text: "ERROR " + res.statusText,
+      });
     },
   });
 }
@@ -100,12 +111,19 @@ function postActivity() {
       maxasist: $("#forMaxAsist").val(),
     }),
     success: function () {
+      Swal.fire({
+        icon: "success",
+        text: "Insertado con éxito!",
+      });
       $("#forName").val("");
       $("#forDescription").val("");
       $("#forMaxAsist").val("");
     },
     error: function (res) {
-      alert("ERROR" + res.statusText);
+      Swal.fire({
+        icon: "error",
+        text: "ERROR " + res.statusText,
+      });
     },
   });
 }
@@ -126,7 +144,10 @@ function getActivityIn() {
       $("#forMaxAsist").val(JSON.stringify(data[0].maxasist).replace(/"/g, ""));
     },
     error: function (res) {
-      alert("ERROR" + res.statusText);
+      Swal.fire({
+        icon: "error",
+        text: "ERROR " + res.statusText,
+      });
     },
   });
 }
@@ -144,12 +165,21 @@ function putActivity() {
       maxasist: $("#forMaxAsist").val(),
     }),
     success: function () {
-      $("#forName").val("");
-      $("#forDescription").val("");
-      $("#forMaxAsist").val("");
+      Swal.fire({
+        icon: "success",
+        text: "Modificado con éxito!",
+      });
+      $("#forName").val(JSON.stringify(data[0].name).replace(/"/g, ""));
+      $("#forDescription").val(
+        JSON.stringify(data[0].description).replace(/"/g, "")
+      );
+      $("#forMaxAsist").val(JSON.stringify(data[0].maxasist).replace(/"/g, ""));
     },
     error: function (res) {
-      alert("ERROR" + res.statusText);
+      Swal.fire({
+        icon: "error",
+        text: "ERROR " + res.statusText,
+      });
     },
   });
 }
