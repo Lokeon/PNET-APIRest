@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="../css/layout.css" />
     <!-- CSS Invitados-->
     <link rel="stylesheet" href="../css/invitados.css" />
+    <!-- CSS Tabs-->
+    <link rel="stylesheet" href="../css/tabs.css" />
+    <!-- CSS Resultados-->
+    <link rel="stylesheet" href="../css/resultado.css" />
     <title>MANGUCA</title>
   </head>
   <body>
@@ -28,7 +32,6 @@
     </header>
     <!-- MAIN -->
     <main>
-
       <div class="main">
         <div class="content">
           <!-- SIDEBAR -->
@@ -40,16 +43,96 @@
             <a class="active" href="./eliminar.html">Eliminar</a>
           </div>
           <div class="information-box">
-            <!-- FAKY INFO -->
             <div class="information">
-              <!-- TEXT -->
-              <div class="content"></div>
+              <!-- TABS -->
+              <div class="buttonContainer">
+                <button onclick="showPanel(0,'#D8AC34')" id="button1">
+                  Individual
+                </button>
+                <button
+                  onclick="showPanel(1,'#D8AC34'); getAllActivities()"
+                  id="button2"
+                >
+                  Todo
+                </button>
+              </div>
+              <!-- TABLE GET ID -->
+              <div class="tabPanel">
+                <div class="tab-Box">
+                  <div class="input">
+                    <label for="forId">Id</label>
+                    <div class="input-box">
+                      <div id="forId-box">
+                        <input required type="text" id="forId" name="id" />
+                      </div>
+                      <input
+                        type="button"
+                        id="btnSubmit"
+                        value="Enviar"
+                        onclick="getActivity()"
+                        disabled="disabled"
+                        class="buttons"
+                      />
+                    </div>
+                  </div>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>
+                          Título
+                        </th>
+                        <th>
+                          Descripción
+                        </th>
+                        <th>
+                          Nº de asistentes
+                        </th>
+                      </tr>
+                      <tr>
+                        <td class="titulo">-</td>
+                        <td class="descripcion">-</td>
+                        <td class="asistentes">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <input
+                    id="btnPUT"
+                    class="buttons"
+                    type="button"
+                    value="Eliminar"
+                    onclick="deleteActivity()"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <!-- END GET ID-->
+
+              <!-- TABLE GET ALL -->
+              <div class="tabPanel">
+                <div class="tab-Box">
+                  <input
+                    id="btnPUT"
+                    class="buttons"
+                    type="button"
+                    value="Eliminar todo"
+                    onclick="deleteActivity()"
+                    disabled="disabled"
+                  />
+                  <table>
+                    <tbody class="resultado2"></tbody>
+                  </table>
+                </div>
+              </div>
             </div>
+            <!-- END GET ALL -->
           </div>
         </div>
       </div>
     </main>
     <!-- SCRIPTS -->
-    
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/wsinvocations.js"></script>
+    <script src="../js/disbutton.js"></script>
+    <script src="../js/tabs.js"></script>
   </body>
 </html>
