@@ -1,3 +1,4 @@
+// Disabled the submit button until the inputs are filled
 (function () {
   $("input[type='text'],input[type='number']").bind(
     "keyup change",

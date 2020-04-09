@@ -63,11 +63,29 @@ function getAllActivities() {
 function deleteActivity() {
   var myUrl = "http://localhost:8080/activities/" + $("#forId").val();
   $.ajax({
-    type: "GET",
+    type: "DELETE",
     dataType: "json",
     url: myUrl,
     success: function (data) {
-      $("#resGetHello").html(JSON.stringify(data[0]));
+      Swal.fire({
+        title: "¿Estas seguro de eliminar la actividad?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        cancelButtonText: "Cancelar",
+        confirmButtonText: "Sí, eliminar!",
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+            "Eliminado!",
+            "La actividad se ha eliminado con éxito.",
+            "success"
+          ).then(function () {
+            location.href = "./eliminar.html";
+          });
+        }
+      });
     },
     error: function (res) {
       Swal.fire({
@@ -86,7 +104,25 @@ function deleteActivities() {
     dataType: "json",
     url: myUrl,
     success: function (data) {
-      alert("Activities Deleted!");
+      Swal.fire({
+        title: "¿Estas seguro de eliminar todo?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        cancelButtonText: "Cancelar",
+        confirmButtonText: "Sí, eliminar todo!",
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+            "Eliminado!",
+            "Todas las actividades han sido eliminadas.",
+            "success"
+          ).then(function () {
+            location.reload();
+          });
+        }
+      });
     },
     error: function (res) {
       Swal.fire({
@@ -114,10 +150,9 @@ function postActivity() {
       Swal.fire({
         icon: "success",
         text: "Insertado con éxito!",
+      }).then(function () {
+        location.href = "./insertar.html";
       });
-      $("#forName").val("");
-      $("#forDescription").val("");
-      $("#forMaxAsist").val("");
     },
     error: function (res) {
       Swal.fire({

@@ -1,3 +1,4 @@
+// Disabled the submit button and the inputs until you get the activity to modified
 (function () {
   $("#forId").bind("keyup change", function () {
     var empty = false;
