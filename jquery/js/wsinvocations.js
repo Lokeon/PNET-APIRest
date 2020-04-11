@@ -66,7 +66,7 @@ function deleteActivity() {
     type: "DELETE",
     dataType: "json",
     url: myUrl,
-    success: function (data) {
+    success: function () {
       Swal.fire({
         title: "¿Estas seguro de eliminar la actividad?",
         icon: "warning",
@@ -103,7 +103,7 @@ function deleteActivities() {
     type: "DELETE",
     dataType: "json",
     url: myUrl,
-    success: function (data) {
+    success: function () {
       Swal.fire({
         title: "¿Estas seguro de eliminar todo?",
         icon: "warning",
