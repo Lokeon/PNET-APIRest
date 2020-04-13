@@ -16,7 +16,8 @@ function getActivity() {
     error: function (res) {
       Swal.fire({
         icon: "error",
-        text: "ERROR " + res.statusText,
+        text:
+          "ERROR: No se ha podido extraer la información. Puede que la actividad que esté intentando consultar no exista o que no se esté comunicando con el servidor.",
       });
     },
   });
@@ -53,7 +54,8 @@ function getAllActivities() {
     error: function (res) {
       Swal.fire({
         icon: "error",
-        text: "ERROR " + res.statusText,
+        text:
+          "ERROR: No se ha podido extraer la información. Compruebe su conexión con el servidor.",
       });
     },
   });
@@ -87,10 +89,11 @@ function deleteActivity() {
         }
       });
     },
-    error: function (res) {
+    error: function () {
       Swal.fire({
         icon: "error",
-        text: "ERROR " + res.statusText,
+        text:
+          "ERROR: No ha podido eliminarse. Puede que la actividad que esté intentando eliminar no exista o que no se esté comunicando con el servidor.",
       });
     },
   });
@@ -124,10 +127,11 @@ function deleteActivities() {
         }
       });
     },
-    error: function (res) {
+    error: function () {
       Swal.fire({
         icon: "error",
-        text: "ERROR " + res.statusText,
+        text:
+          "ERROR: No ha podido eliminarse. Compruebe su conexión con el servidor.",
       });
     },
   });
@@ -154,10 +158,11 @@ function postActivity() {
         location.href = "./insertar.html";
       });
     },
-    error: function (res) {
+    error: function () {
       Swal.fire({
         icon: "error",
-        text: "ERROR " + res.statusText,
+        text:
+          "ERROR: No ha podido insertarse. Compruebe su conexión con el servidor.",
       });
     },
   });
@@ -178,10 +183,11 @@ function getActivityIn() {
       );
       $("#forMaxAsist").val(JSON.stringify(data[0].maxasist).replace(/"/g, ""));
     },
-    error: function (res) {
+    error: function () {
       Swal.fire({
         icon: "error",
-        text: "ERROR " + res.statusText,
+        text:
+          "ERROR: No se ha podido extraer la información. Puede que la actividad que esté intentando consultar no exista o que no se esté comunicando con el servidor.",
       });
     },
   });
@@ -213,7 +219,8 @@ function putActivity() {
     error: function (res) {
       Swal.fire({
         icon: "error",
-        text: "ERROR " + res.statusText,
+        text:
+          "ERROR: No se ha podido actualizar la información. Puede que la actividad que esté intentando modificar no exista o que no se esté comunicando con el servidor.",
       });
     },
   });

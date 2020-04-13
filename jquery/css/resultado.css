@@ -49,3 +49,7 @@ input[type="number"] {
 #forId {
   width: 100%;
 }
+
+#btnDelete {
+  margin-bottom: 3em;
+}
