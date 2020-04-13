@@ -320,3 +320,14 @@ div.breadcrumb ul li + li::before {
 .titleBox {
   background-position-x: 10em;
 }
+
+#index {
+  text-align: center;
+  padding-top: 3em;
+  line-height: 1px;
+}
+
+#index-title {
+  font-size: 44px;
+  text-decoration: underline #b11200;
+}
